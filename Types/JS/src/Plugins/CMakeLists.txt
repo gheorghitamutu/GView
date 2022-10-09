@@ -1,2 +1,5 @@
-target_sources(JS PRIVATE AddStrings.cpp
-		ReverseStrings.cpp)
+target_sources(JS PRIVATE 
+		AddStrings.cpp
+		ReverseStrings.cpp
+		RemoveComments.cpp
+)
