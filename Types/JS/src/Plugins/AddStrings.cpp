@@ -156,9 +156,9 @@ GView::View::LexicalViewer::PluginAfterActionRequest AddStrings::Execute(GView::
             Token start = tThird;
 
             while (start.Precedent().GetTypeID(TokenType::None) == TokenType::Operator_Plus &&
-                         start.Precedent().Precedent().GetTypeID(TokenType::None) == TokenType::String ||
-                   (start.Precedent().Precedent().GetTypeID(TokenType::None) == TokenType::Word &&
-                    stringTokens.count(std::u16string{ start.Precedent().Precedent().GetText() }) > 0))
+                   (start.Precedent().Precedent().GetTypeID(TokenType::None) == TokenType::String ||
+                    (start.Precedent().Precedent().GetTypeID(TokenType::None) == TokenType::Word &&
+                     stringTokens.count(std::u16string{ start.Precedent().Precedent().GetText() }) > 0)))
             {
                 start = start.Precedent().Precedent();
             }
